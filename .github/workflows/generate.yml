@@ -1,0 +1,26 @@
+name: Generate Web Site
+on:
+    push:
+        branches:
+        - main
+    pull_request:
+
+jobs:
+    flake8:
+        name: Flake8
+        runs-on: ubuntu-latest
+        steps:
+        -   uses: actions/checkout@v2
+        -
+            uses: actions/setup-python@v1
+            with:
+                python-version: '3.10'
+        -   name: "Main Script"
+            run: |
+                sudo apt update
+                sudo apt install graphicsmagick
+
+                python -m venv .venv
+                source .venv/bin/activate
+                pip install -r requirements.txt
+                make
