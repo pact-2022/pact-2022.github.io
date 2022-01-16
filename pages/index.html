@@ -12,7 +12,7 @@
       <h1 class="display-5 fw-bold lh-1 mb-3">PACT 2022</h1>
       <p class="lead">
       The 31st International Conference on Parallel Architectures and
-      Compilation Techniques (PACT) will be held during ${conf_dates}.
+      Compilation Techniques (PACT) will be held during {{conf_dates}}.
       PACT is a long-running and unique conference at the intersection of
       classical parallel architectures and compilers that brings together
       researchers from architecture, compilers, programming languages, and
@@ -20,8 +20,8 @@
       Applications as a driver for innovations in architecture and compilers
       are an important theme of the conference.
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Submit</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Attend</button>
+        <a href="submit.html" class="btn btn-primary btn-lg px-4 me-md-2">Submit</a>
+        <a href="attend.html" class="btn btn-outline-secondary btn-lg px-4">Attend</a>
       </div>
     </div>
   </div>
@@ -29,7 +29,9 @@
 
 {% block maincol %}
   {% filter markdown %}
-    # Submit your stuff!
+    # Location
+
+    {{ conf_name }} will be held on {{ conf_dates }} in **Chicago, IL**.
 
   {% endfilter %}
 {% endblock %}
