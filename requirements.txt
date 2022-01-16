@@ -1,2 +1,2 @@
-mako
-Markdown
+Jinja2==3.0.3
+Markdown==3.3.6

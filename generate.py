@@ -3,64 +3,10 @@
 
 import glob
 
-from mako.template import Template
-from mako.lookup import TemplateLookup
-from mako.lexer import Lexer as LexerBase
 import os
 import shutil
 from pathlib import Path
 import markdown
-import re
-
-
-# {{{ mako lexer without ## comments (which conflict with markdown)
-
-class Lexer(LexerBase):
-    def match_control_line(self):
-        # Original version:
-        # https://github.com/sqlalchemy/mako/blob/7e52b60b7dac75a3c7177e69244123c0dad9e9d9/mako/lexer.py#L421-L457
-        # (comment handling deleted)
-        import mako.exceptions as exceptions
-        import mako.parsetree as parsetree
-        match = self.match(
-            r"(?<=^)[\t ]*(%(?!%))[\t ]*((?:(?:\\\r?\n)|[^\r\n])*)"
-            r"(?:\r?\n|\Z)",
-            re.M,
-        )
-        if not match:
-            return False
-
-        operator = match.group(1)
-        text = match.group(2)
-        if operator == "%":
-            m2 = re.match(r"(end)?(\w+)\s*(.*)", text)
-            if not m2:
-                raise exceptions.SyntaxException(
-                    "Invalid control line: '%s'" % text,
-                    **self.exception_kwargs,
-                )
-            isend, keyword = m2.group(1, 2)
-            isend = isend is not None
-
-            if isend:
-                if not len(self.control_line):
-                    raise exceptions.SyntaxException(
-                        "No starting keyword '%s' for '%s'" % (keyword, text),
-                        **self.exception_kwargs,
-                    )
-                elif self.control_line[-1].keyword != keyword:
-                    raise exceptions.SyntaxException(
-                        "Keyword '%s' doesn't match keyword '%s'"
-                        % (text, self.control_line[-1].keyword),
-                        **self.exception_kwargs,
-                    )
-            self.append_node(parsetree.ControlLine, keyword, isend, text)
-        else:
-            raise AssertionError()
-
-        return True
-
-# }}}
 
 
 # {{{ remove common indentation
@@ -118,18 +64,28 @@ DATA = {
 
 
 def main():
+    from jinja2 import Environment, FileSystemLoader
+    jinja_env = Environment(
+            loader=FileSystemLoader(["template"]),
+            autoescape=False
+            )
+
+    jinja_env.filters["markdown"] = filter_markdown
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     for fname in glob.glob("pages/**/*.html", recursive=True):
         fname = Path(fname)
         with open(fname, "r") as infile:
-            tpl = Template(
-                    infile.read(),
-                    strict_undefined=True,
-                    lexer_cls=Lexer,
-                    lookup=TemplateLookup(["template"]))
+            tpl = jinja_env.from_string(infile.read())
 
-        rendered = tpl.render(**DATA)
-        outname = OUTPUT_DIR / Path(*fname.parts[1:])
+        basepath = Path(*fname.parts[1:])
+        outname = OUTPUT_DIR / basepath
+
+        data = DATA | {
+                "current_file": str(basepath)
+                }
+
+        rendered = tpl.render(data)
         with open(outname, "w") as outf:
             outf.write(rendered)
 

@@ -1,13 +1,13 @@
-<%inherit file="base.html"/>
+{% extends "base.html" %}
 
-<%block name="main">
+{% block main %}
   <div class="row mb-3">
     <div class="col-md-8">
-      <%block name="maincol">
-      </%block>
+      {% block maincol %}
+      {% endblock %}
     </div>
     <div class="col-md-4">
-      <%block filter="markdown">
+      {% filter markdown %}
         ## Important Dates and Deadlines
 
         **Conference Papers:**
@@ -65,7 +65,7 @@
 
         #### Academic
 
-      </%block>
+      {% endfilter %}
     </div>
   </div>
-</%block>
+{% endblock %}

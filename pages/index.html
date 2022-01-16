@@ -1,6 +1,6 @@
-<%inherit file="base-sidebar.html"/>
+{% extends "base-sidebar.html" %}
 
-<%block name="hero">
+{% block hero %}
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img src="images-generated/chicago-skyline-800px.jpeg" class="d-block mx-lg-auto img-fluid" alt="Chicago Skyline" loading="lazy">
@@ -25,18 +25,11 @@
       </div>
     </div>
   </div>
-</%block>
+{% endblock %}
 
+{% block maincol %}
+  {% filter markdown %}
+    # Submit your stuff!
 
-
-<%block name="maincol" filter="markdown">
-
-  # Submit your stuff!
-
-  <h1>Get started with Bootstrap</h1>
-  <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
-
-  <div class="mb-5">
-    <a href="/docs/5.1/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
-  </div>
-</%block>
+  {% endfilter %}
+{% endblock %}
