@@ -23,12 +23,24 @@
         </a>
 
         <ul class="nav nav-pills">
-          <li class="nav-item"><a href="${base_dir}/index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="${base_dir}/submit.html" class="nav-link">Submit</a></li>
-          <li class="nav-item"><a href="${base_dir}/program.html" class="nav-link">Program</a></li>
-          <li class="nav-item"><a href="${base_dir}/faq.html" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="${base_dir}/org.html" class="nav-link">Organization</a></li>
-          <li class="nav-item"><a href="${base_dir}/about.html" class="nav-link">About</a></li>
+          {% macro nav_item(filename, title) %}
+          <li class="nav-item">
+            <a href="{{base_dir}}/{{filename}}"
+              {% if current_file == filename %}
+                class="nav-link active" aria-current="page"
+              {% else %}
+                class="nav-link"
+              {% endif %}
+              >{{title}}</a>
+          </li>
+          {% endmacro %}
+
+          {{ nav_item("index.html", "Home") }}
+          {{ nav_item("submit.html", "Submit") }}
+          {{ nav_item("attend.html", "Attend") }}
+          {{ nav_item("program.html", "Program") }}
+          {{ nav_item("org.html", "Organization") }}
+          {{ nav_item("about.html", "About") }}
         </ul>
       </header>
       <main>
@@ -38,7 +50,7 @@
         {% endblock %}
       </main>
       <footer class="pt-5 my-5 text-muted border-top">
-        &copy; The {{conf_name}} organizers
+        &copy; The {{conf_name}} Organizers
       </footer>
     </div>
   </body>
