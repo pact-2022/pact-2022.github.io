@@ -10,7 +10,10 @@ The page is accessible at https://pact-2022.github.io/.
 ## Making simple changes
 
 If you would like to edit the site, very likely what you want is under the
-`pages/` subdirectory.
+`pages/` subdirectory. You can make simple changes right here on Github
+by editing the file. If you're not sure that you're doing it right,
+please suggest changes via a pull request rather than directly editing
+the `main` branch.
 
 ## Making bigger changes
 
