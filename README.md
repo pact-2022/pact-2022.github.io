@@ -1,6 +1,6 @@
 # Web page for PACT 2022
 
-[PACT](https://pactconf.org) is the International Conference on Parallel
+[PACT](http://pactconf.org) is the International Conference on Parallel
 Architectures and Compilation Techniques. This repository contains the source
 code for its web page. Any changes here will automatically propage to the
 public site, via Github Actions and Github Pages (where the page is hosted).
