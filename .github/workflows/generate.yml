@@ -6,8 +6,8 @@ on:
     pull_request:
 
 jobs:
-    flake8:
-        name: Flake8
+    generator:
+        name: Generator
         runs-on: ubuntu-latest
         steps:
         -   uses: actions/checkout@v2
@@ -24,3 +24,10 @@ jobs:
                 source .venv/bin/activate
                 pip install -r requirements.txt
                 make
+
+                if test "$GITHUB_REF" == "refs/heads/main"; then
+                    eval $(ssh-agent) && echo "$GH_PAGES_AUTOPUSH_KEY" | ssh-add -
+                    make publish
+                fi
+            env:
+                GH_PAGES_AUTOPUSH_KEY: ${secrets.GH_PAGES_AUTOPUSH_KEY}
