@@ -27,9 +27,8 @@ jobs:
 
                 if test "$GITHUB_REF" == "refs/heads/main"; then
                     eval $(ssh-agent)
-                   echo "$GH_PAGES_AUTOPUSH_KEY" | head -n 2
                    echo "$GH_PAGES_AUTOPUSH_KEY" | ssh-add -
                     make publish
                 fi
             env:
-                GH_PAGES_AUTOPUSH_KEY: ${secrets.GH_PAGES_AUTOPUSH_KEY}
+                GH_PAGES_AUTOPUSH_KEY: ${{ secrets.GH_PAGES_AUTOPUSH_KEY }}
