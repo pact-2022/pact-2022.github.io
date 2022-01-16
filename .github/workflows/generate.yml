@@ -28,7 +28,11 @@ jobs:
                 if test "$GITHUB_REF" == "refs/heads/main"; then
                     eval $(ssh-agent)
                    echo "$GH_PAGES_AUTOPUSH_KEY" | ssh-add -
-                    make publish
+
+                   git config --global user.email "andreask@illinois.edu"
+                   git config --global user.name "GH Pages Autopusher"
+
+                   make publish
                 fi
             env:
                 GH_PAGES_AUTOPUSH_KEY: ${{ secrets.GH_PAGES_AUTOPUSH_KEY }}
