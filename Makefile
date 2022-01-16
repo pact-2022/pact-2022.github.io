@@ -15,3 +15,8 @@ static/images-generated/illinois-wordmark.png: image-src/illinois-wordmark-dark-
 
 clean:
 	rm -Rf static/images-generated output
+
+publish: all
+	./publish.sh
+
+
