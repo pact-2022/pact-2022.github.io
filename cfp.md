@@ -17,7 +17,7 @@ researchers from architecture, compilers, execution environments,
 programming languages, and applications, to present and discuss their
 latest research results.
 
-Our current plan is to hold PACT 2022 as a presential event, after two
+Our current plan is to hold PACT 2022 as a in-person event, after two
 consecutive virtual conferences. However, because of the uncertainty on
 the evolution of the pandemic and various travel restrictions, we still
 may need to revise those plans. We will make this decision some time in
