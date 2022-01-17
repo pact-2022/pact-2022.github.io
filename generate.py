@@ -59,6 +59,7 @@ DATA = {
         "base_dir": ".",
         "conf_name": "PACT 2022",
         "conf_dates": "October 10&ndash;12, 2022",
+        "submission_deadline": "April 25, 2022",
         "markdown": filter_markdown,
         }
 

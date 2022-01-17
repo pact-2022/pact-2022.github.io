@@ -2,7 +2,7 @@
 
 {{ conf_name }} will be held on {{ conf_dates }} in **Chicago, IL**.
 
-**Submissions Due: April 25, 2022**
+**Submissions Due: {{ submission_deadline }}**
 
 For further details, and to submit your work, please see the conference
 web site at <https://pact-2022.github.io>.
@@ -58,7 +58,7 @@ limited to) the following:
 ## Key Dates
 
 -   Abstracts Deadline: April 18, 2022
--   Full Papers Deadline: April 25, 2022
+-   Full Papers Deadline: {{ submission_deadline }}
 -   Round 1 Rebuttal Period: June 6-9, 2022
 -   Round 2 Rebuttal Period: July 11-14, 2022
 -   Author Notification: July 29, 2022

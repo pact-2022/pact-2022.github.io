@@ -1,6 +1,6 @@
 ## Submitting your work
 
-Paper submissions are due **April 25, 2022**. Please make sure that your
+Paper submissions are due **{{ submission_deadline }}**. Please make sure that your
 paper satisfies all the following requirements before being submitted.
 Submissions not adhering to these submission guidelines will be rejected
 by the submission system and/or subject to an administrative reject.
