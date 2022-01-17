@@ -7,6 +7,8 @@
 For further details, and to submit your work, please see the conference
 web site at <https://pact-2022.github.io>.
 
+**FIXME** Add final conference URL once available.
+
 ## Scope
 
 2022 will mark the 31st edition of the International Conference on
