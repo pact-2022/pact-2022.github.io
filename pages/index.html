@@ -29,9 +29,11 @@
 
 {% block maincol %}
   {% filter markdown %}
-    # Location
+    {% filter indent(4) -%}
+    {% include "cfp.md" %}
+    {% endfilter %}
 
-    {{ conf_name }} will be held on {{ conf_dates }} in **Chicago, IL**.
-
+    Download the Call for Papers in plain text/Markdown form, e.g.
+    for dissemination in email: [`cfp-pact-2022.txt`](./cfp-pact-2022.txt)
   {% endfilter %}
 {% endblock %}

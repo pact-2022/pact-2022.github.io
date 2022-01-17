@@ -1,5 +1,10 @@
 all: img
-	python3 generate.py
+	mkdir -p output
+	python3 generate.py cfp.md > output/cfp-pact-2022.txt
+	for pg in pages/*.html; do \
+		python3 generate.py $${pg} > output/$${pg##pages/} ; \
+	done
+	cp -Rv static/* output/
 
 img: \
 	static/images-generated/chicago-skyline-800px.jpeg \

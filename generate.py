@@ -64,39 +64,35 @@ DATA = {
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(
+            description="Run PACT-specific Jinja expansion on INFILE, "
+            "sending output to stdout.")
+    parser.add_argument("infile", metavar="INFILE",
+            help="an integer for the accumulator")
+
+    args = parser.parse_args()
+
     from jinja2 import Environment, FileSystemLoader
     jinja_env = Environment(
-            loader=FileSystemLoader(["template"]),
+            loader=FileSystemLoader([".", "template"]),
             autoescape=False
             )
 
     jinja_env.filters["markdown"] = filter_markdown
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    for fname in glob.glob("pages/**/*.html", recursive=True):
-        fname = Path(fname)
-        with open(fname, "r") as infile:
-            tpl = jinja_env.from_string(infile.read())
+    fname = Path(args.infile)
+    with open(fname, "r") as infile:
+        tpl = jinja_env.from_string(infile.read())
 
-        basepath = Path(*fname.parts[1:])
-        outname = OUTPUT_DIR / basepath
+    basepath = Path(*fname.parts[1:])
 
-        data = DATA | {
-                "current_file": str(basepath)
-                }
+    data = DATA | {
+            "current_file": str(basepath)
+            }
 
-        rendered = tpl.render(data)
-        with open(outname, "w") as outf:
-            outf.write(rendered)
-
-    for fname in glob.glob("static/**/*", recursive=True):
-        fname = Path(fname)
-        if not os.path.isfile(fname):
-            continue
-
-        outname = OUTPUT_DIR / Path(*fname.parts[1:])
-        os.makedirs(os.path.dirname(outname), exist_ok=True)
-        shutil.copy2(fname, outname)
+    from html import unescape
+    print(unescape(tpl.render(data)))
 
 
 if __name__ == "__main__":
