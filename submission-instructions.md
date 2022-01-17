@@ -18,9 +18,11 @@ by the submission system and/or subject to an administrative reject.
     content NOT INCLUDING references, and there is no page limit for
     references. Your paper must print satisfactorily on both Letter
     paper (8.5"x11") and A4 paper (8.27"x11.69"). The box containing the
-    text should be no larger than 7.15"x9.27" (18.2cm x 23.5cm). Click
-    [here](https://hpc.pnl.gov/pact19/files/pact19.zip) for templates in
-    LaTeX and Word.
+    text should be no larger than 7.15"x9.27" (18.2cm x 23.5cm).
+
+    **FIXME** Not yet available.
+
+    [Submission template](https://pact-2022.github.io/pact22-template.zip)
 
 -   Anonymized supplementary material may be provided in a single PDF
     file uploaded at paper submission time, containing material that
