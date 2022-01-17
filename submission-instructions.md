@@ -126,5 +126,5 @@ Papers that successfully go through the Artifact Evaluation process will
 receive a seal of approval printed on the papers themselves. Authors of
 such papers will have an option to include their Artifact Appendix to
 the final paper (up to 2 pages). Authors are also encouraged to make
-their artifacts publicly available, for example using Code Ocean
-platform (official partner of IEEE Digital Library).
+their artifacts publicly available, for example using the Code Ocean
+platform.
