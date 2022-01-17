@@ -11,7 +11,7 @@ static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2
 
 static/images-generated/illinois-wordmark.png: image-src/illinois-wordmark-dark-letters.pdf
 	mkdir -p "./$(dir $@)"
-	gm convert -geometry 300x300 $< $@
+	gm convert -density 1000 -geometry 300x300 $< $@
 
 clean:
 	rm -Rf static/images-generated output
