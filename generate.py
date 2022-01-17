@@ -1,10 +1,5 @@
 #! /usr/bin/env python3
 
-
-import glob
-
-import os
-import shutil
 from pathlib import Path
 import markdown
 
