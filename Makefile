@@ -30,4 +30,4 @@ clean:
 publish: all
 	./publish.sh
 
-
+.PHONY: all
