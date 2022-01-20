@@ -55,7 +55,7 @@ by the submission system and/or subject to an administrative reject.
     >
     > - [1] Joe Smith, "A Parallel Architecture for ...,"
     >   Proceedings of PACT 2004.
-    > - \[2\] Joe Smith, "A Compilation Technique for ...,"
+    > - [2] Joe Smith, "A Compilation Technique for ...,"
     >   Proceedings of PACT 2005.
 
 -   Your submission must be formatted for black-and-white printers and
