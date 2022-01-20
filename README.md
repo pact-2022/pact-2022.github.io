@@ -5,7 +5,7 @@ Architectures and Compilation Techniques. This repository contains the source
 code for its web page. Any changes here will automatically propage to the
 public site, via Github Actions and Github Pages (where the page is hosted).
 
-The page is accessible at https://pact-2022.github.io/.
+The page is accessible at https://pact22.cs.illinois.edu/.
 
 ## Making simple changes
 
