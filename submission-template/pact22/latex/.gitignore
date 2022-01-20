@@ -27,5 +27,6 @@ samples/sample-*.pdf
 *~
 *.bcf
 *.run.xml
-samples/ACM-Reference-Format.bst
-samples/*.tex
+latex.out
+
+pact22-template.pdf
