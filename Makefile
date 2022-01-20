@@ -1,10 +1,16 @@
-all: img
+all: img output/pact22-template.zip
 	mkdir -p output
 	python3 generate.py cfp.md > output/cfp-pact-2022.txt
 	for pg in pages/*.html; do \
 		python3 generate.py $${pg} > output/$${pg##pages/} ; \
 	done
 	cp -Rv static/* output/
+
+output/pact22-template.zip: \
+	./submission-template/pact22/pact22-template.docx \
+	./submission-template/pact22/latex/pact22-template.tex
+	mkdir -p output
+	cd submission-template && zip ../$@ $$(git ls-files)
 
 img: \
 	static/images-generated/chicago-skyline-800px.jpeg \
