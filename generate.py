@@ -54,6 +54,7 @@ DATA = {
         "base_dir": ".",
         "conf_name": "PACT 2022",
         "conf_dates": "October 10&ndash;12, 2022",
+        "conf_root_url": "https://pact22.cs.illinois.edu",
         "submission_deadline": "April 25, 2022",
         "markdown": filter_markdown,
         }

@@ -5,9 +5,7 @@
 **Submissions Due: {{ submission_deadline }}**
 
 For further details, and to submit your work, please see the conference
-web site at <https://pact-2022.github.io>.
-
-**FIXME** Add final conference URL once available.
+web site at <{{ conf_root_url }}>.
 
 ## Scope
 
