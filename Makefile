@@ -14,7 +14,8 @@ output/pact22-template.zip: \
 
 img: \
 	static/images-generated/chicago-skyline-800px.jpeg \
-	static/images-generated/illinois-wordmark.png
+	static/images-generated/illinois-wordmark.png \
+	static/images-generated/ieee-tcpp-logo-300px.png
 
 static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2juw4_o-unsplash.jpg
 	mkdir -p "./$(dir $@)"
@@ -23,6 +24,10 @@ static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2
 static/images-generated/illinois-wordmark.png: image-src/illinois-wordmark-dark-letters.pdf
 	mkdir -p "./$(dir $@)"
 	gm convert -density 1000 -geometry 300x300 $< $@
+
+static/images-generated/ieee-tcpp-logo-300px.png: image-src/ieee-tcpp-logo.png
+	mkdir -p "./$(dir $@)"
+	gm convert -geometry 300x300 $< $@
 
 clean:
 	rm -Rf static/images-generated output
