@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 
 from pathlib import Path
-import markdown
 
 
 # {{{ remove common indentation
@@ -45,7 +44,9 @@ def remove_common_indentation(code: str, require_leading_newline: bool = True):
 
 
 def filter_markdown(s):
-    return markdown.markdown(remove_common_indentation(s))
+    import markdown
+    return markdown.markdown(remove_common_indentation(s),
+            extensions=["extra"])
 
 
 OUTPUT_DIR = Path("output")
