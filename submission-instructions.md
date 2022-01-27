@@ -13,12 +13,12 @@ by the submission system and/or subject to an administrative reject.
     presented previously at a workshop without copyrighted proceedings.
 
 -   The submission is limited to ten (10) pages in the ACM 8.5" x
-    11" (US letter size paper) using 9pt font, with
-    no more than 7 lines per inch. This page limit applies to all
-    content NOT INCLUDING references, and there is no page limit for
-    references. Your paper must print satisfactorily on both Letter
-    paper (8.5"x11") and A4 paper (8.27"x11.69"). The box containing the
-    text should be no larger than 7.15"x9" (18.2cm x 22.9cm).
+    11" format (US letter size paper) using 9pt font, with no more than 7 lines
+    per inch. This page limit applies to all content NOT INCLUDING references,
+    and there is no page limit for references. Your paper must print
+    satisfactorily on both Letter paper (8.5"x11") and A4 paper (8.27"x11.69").
+    The box containing the text should be no larger than 7.15"x9" (18.2cm x
+    22.9cm).
 
     [Submission template]({{ conf_root_url }}/pact22-template.zip)
 
