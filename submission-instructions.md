@@ -12,7 +12,7 @@ by the submission system and/or subject to an administrative reject.
     review by another conference or journal. You may submit material
     presented previously at a workshop without copyrighted proceedings.
 
--   The submission is limited to eleven (11) pages in the ACM 8.5" x
+-   The submission is limited to ten (10) pages in the ACM 8.5" x
     11" (US letter size paper) using 9pt font, with
     no more than 7 lines per inch. This page limit applies to all
     content NOT INCLUDING references, and there is no page limit for
