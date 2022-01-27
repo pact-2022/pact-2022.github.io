@@ -6,9 +6,7 @@ all: img output/pact22-template.zip
 	done
 	cp -Rv static/* output/
 
-output/pact22-template.zip: \
-	./submission-template/pact22/pact22-template.docx \
-	./submission-template/pact22/latex/pact22-template.tex
+output/pact22-template.zip: ./submission-template/pact22/latex/pact22-template.tex
 	mkdir -p output
 	cd submission-template && zip ../$@ $$(git ls-files)
 

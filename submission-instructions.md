@@ -19,8 +19,6 @@ by the submission system and/or subject to an administrative reject.
     references. Your paper must print satisfactorily on both Letter
     paper (8.5"x11") and A4 paper (8.27"x11.69"). The box containing the
     text should be no larger than 7.15"x9" (18.2cm x 22.9cm).
-    Note that the supplied Word template uses single-column layout,
-    while the LaTeX template uses two-column layout.
 
     [Submission template]({{ conf_root_url }}/pact22-template.zip)
 
