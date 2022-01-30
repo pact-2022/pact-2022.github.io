@@ -62,3 +62,11 @@ limited to) the following:
 -   Author Notification: July 29, 2022
 -   Artifact Submission: August 5, 2022
 -   Camera Ready Papers: August 26, 2022
+
+## Code of Ethics and Policy Against Harrassment
+
+All individuals participating in PACT or involved with its organization
+are expected to follow the
+
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics), and the
+- [Policy Against Harrassment at ACM activities](https://www.acm.org/about-acm/policy-against-harassment).
