@@ -72,6 +72,7 @@ by the submission system and/or subject to an administrative reject.
     it. We suggest that you use only the four widely used printer fonts:
     Times, Helvetica, Courier and Symbol.
 
+Please submit your work via the paper submission site at <https://pact22.hotcrp.com/>.
 ## Conflicts of Interest
 
 To ensure a fair and high-quality reviewing process we ask ALL authors
