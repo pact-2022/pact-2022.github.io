@@ -70,3 +70,24 @@ are expected to follow the
 
 - [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics), and the
 - [Policy Against Harrassment at ACM activities](https://www.acm.org/about-acm/policy-against-harassment).
+
+## ACM Publication Policies
+
+By submitting your article to an ACM Publication, you are hereby acknowledging
+that you and your co-authors are subject to all [ACM Publications
+Policies](https://www.acm.org/publications/policies), including ACM's new
+[Publications Policy on Research Involving Human Participants and
+Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects).
+Alleged violations of this policy or any ACM Publications Policy will be
+investigated by ACM and may result in a full retraction of your paper, in
+addition to other potential penalties, as per ACM Publications Policy.
+
+Please ensure that you and your co-authors [obtain an ORCID
+ID](https://orcid.org/register), so you can complete the publishing process for
+your accepted paper. ACM has been involved in ORCID from the start and we have
+recently made a [commitment to collect ORCID
+IDs](https://authors.acm.org/author-resources/orcid-faqs) from all of our
+published authors. The collection process has started and will roll out as a
+requirement throughout 2022.  We are committed to improve author
+discoverability, ensure proper attribution and contribute to ongoing community
+efforts around name normalization; your ORCID ID will help in these efforts.
