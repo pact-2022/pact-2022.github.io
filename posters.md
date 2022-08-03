@@ -40,12 +40,15 @@ limited to) the following:
     control software
 -   Simulation of quantum circuits
 
+Please submit a single PDF of your poster for review through the conference website.
+You will have to print and bring your own poster to the conference.
+
 ## Key Dates
 
 -   Poster Submission Deadline: September 1, 2022
-    Author Notification: September 15, 2022
-    Extended Abstract: September 29, 2022
-    Poster Session: October 10, 2022
+-   Author Notification: September 15, 2022
+-   Extended Abstract: September 29, 2022
+-   Poster Session: October 10, 2022
 
 ## ACM Publication Policies
 
