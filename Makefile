@@ -13,11 +13,16 @@ output/pact22-template.zip: ./submission-template/pact22/pact22-template.tex
 img: \
 	static/images-generated/chicago-skyline-800px.jpeg \
 	static/images-generated/illinois-wordmark.png \
-	static/images-generated/ieee-tcpp-logo-300px.png
+	static/images-generated/ieee-tcpp-logo-300px.png \
+	static/images-generated/huawei.png
 
 static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2juw4_o-unsplash.jpg
 	mkdir -p "./$(dir $@)"
 	gm convert -geometry 800x800 $< $@
+
+static/images-generated/huawei.png: image-src/huawei-logo.png
+	mkdir -p "./$(dir $@)"
+	gm convert -geometry 300x300 $< $@
 
 static/images-generated/illinois-wordmark.png: image-src/illinois-wordmark-dark-letters.pdf
 	mkdir -p "./$(dir $@)"
