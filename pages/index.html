@@ -11,6 +11,12 @@
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold lh-1 mb-3">PACT 2022</h1>
       <p class="lead">
+        {% filter markdown %}
+          {{ conf_dates }}<br>
+          [Discovery Partners Institute](https://dpi.uillinois.edu/contact/), Chicago, IL
+        {% endfilter %}
+      </p>
+      <p class="lead">
       The 31st International Conference on Parallel Architectures and
       Compilation Techniques (PACT) will be held during {{conf_dates}}.
       PACT is a long-running and unique conference at the intersection of
@@ -19,6 +25,8 @@
       applications to present and discuss their latest research results.
       Applications as a driver for innovations in architecture and compilers
       are an important theme of the conference.
+      </p>
+
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a href="submit.html" class="btn btn-primary btn-lg px-4 me-md-2">For Authors</a>
         {# <a href="https://pact22.hotcrp.com/" class="btn btn-secondary btn-lg px-4 me-md-2">Submit a Paper</a> #}
