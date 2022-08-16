@@ -14,7 +14,10 @@ img: \
 	static/images-generated/chicago-skyline-800px.jpeg \
 	static/images-generated/illinois-wordmark.png \
 	static/images-generated/ieee-tcpp-logo-300px.png \
-	static/images-generated/huawei.png
+	static/images-generated/huawei.png \
+	static/images-generated/headshot-diventra.jpg \
+	static/images-generated/headshot-srinivasan.jpg \
+	static/images-generated/headshot-chong.jpg
 
 static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2juw4_o-unsplash.jpg
 	mkdir -p "./$(dir $@)"
@@ -29,6 +32,10 @@ static/images-generated/illinois-wordmark.png: image-src/illinois-wordmark-dark-
 	gm convert -density 1000 -geometry 300x300 $< $@
 
 static/images-generated/ieee-tcpp-logo-300px.png: image-src/ieee-tcpp-logo.png
+	mkdir -p "./$(dir $@)"
+	gm convert -geometry 300x300 $< $@
+
+static/images-generated/headshot-%.jpg: image-src/headshot-%.jpg
 	mkdir -p "./$(dir $@)"
 	gm convert -geometry 300x300 $< $@
 
