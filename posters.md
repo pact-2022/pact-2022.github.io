@@ -40,7 +40,11 @@ limited to) the following:
     control software
 -   Simulation of quantum circuits
 
-Please submit a single PDF of your poster for review through the conference website.
+Please submit a single PDF of your poster for review via our submission
+and review system:
+
+<a href="https://easychair.org/my/conference?conf=pact2022postersessio" class="btn btn-outline-secondary btn-md px-4 me-md-2">Submit a Poster &raquo;</a>
+
 You will have to print and bring your own poster to the conference.
 
 ## Key Dates
