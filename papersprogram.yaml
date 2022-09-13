@@ -1,0 +1,102 @@
+monday:
+    morning:
+    -
+        title: "Compilers"
+        talks: |
+            10:00,10:30,#295,ReACT: Redundancy-Aware Code Generation for Tensor Expressions ,"T. Zhou, R. Tian, R. Ashraf, R. Gioiosa, G. Kestor, V. Sarkar"
+            10:30,11:00,#120,Combining Run-time Checks and Compile-time Analysis to Improve Control Flow Auto-Vectorization ,"B. Liu, A. Laird, W. Tsang, B. Mahjour, M. Dehnavi"
+            11:00,11:30,#12,Com-CAS: Effective Cache Apportioning Under Compiler Guidance ,"B. Chatterjee, S. Khan, S. Pande"
+            11:30,12:00,#267,Transfer-Tuning: Reusing Auto-Schedules for Efficient Tensor Program Code Generation ,"P. Gibson, J. Cano"
+
+    -
+        title: Optimizing the execution of GNNs
+        talks: |
+            10:00,10:30,#520,Slice-and-Forge: Making Better Use of Caches for Graph Convolutional Network Accelerators ,"M. Yoo, J. Song, H. Lee, J. Lee, N. Kim, Y. Kim, J. Lee"
+            10:30,11:00,#148,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing ,"Z. Zhou, C. Li, X. Wei, X. Wang, G. Sun"
+            11:00,11:30,#31,T-GCN: A Sampling Based Streaming Graph Neural Network System With Hybrid Architecture ,"C. Huan, S. Song, Y. Liu, H. Zhang, H. Liu, C. He, K. Chen, J. Jiang, Y. Wu"
+            11:30,12:00,#403,Optimizing Aggregate Computation of Graph Neural Networks with On-GPU Interpreter-Style Programming ,"Z. Ji, C. Wang"
+
+    afternoon:
+    -
+        title: Getting more out of your memory
+        talks: |
+            13:30,14:00,#66,FlatPack: Flexible Compaction of Compressed Memory ,"A. Eldstål-Ahrens, A. Arelakis, I. Sourdis"
+            14:00,14:30,#118,Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications ,"H. Qiu, S. Liu, X. Song, S. Khan, G. Pekhimenko"
+            14:30,15:00,#199,Efficient Atomic Durability on eADR-enabled Persistent Memory ,"T. Zhou, Y. Du, F. Yang, X. Liao, Y. Lu"
+
+    -
+        title: Sparse matrix computations
+        talks: |
+            13:30,14:00,#416,Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs ,"R. Castro, D. Andrade, B. Fraguela"
+            14:00,14:30,#133,Squaring the circle: Executing Sparse Matrix Computations on FlexTPU—a TPU-like processor ,"X. He, K. Chen, S. Feng, H. Kim, D. Blaauw, R. Dreslinski, T. Mudge"
+            14:30,15:00,#139,Custom High-Performance Vector Code Generation for Data-Specific Sparse Computations ,"M. Horro, L. Pouchet, G. Rodríguez, J. Tourino"
+
+    evening:
+    -
+        title: Graph processing
+        talks: |
+            15:30,16:00,#72,Batched Graph Community Detection on GPUs ,"H. Chou, S. Ghosh"
+            16:00,16:30,#85,SampleMine: A Framework for Applying Random Sampling to Subgraph Pattern Mining through Loop Perforation ,"P. Jiang, Y. Wei, J. Su, R. Wang, B. Wu"
+            16:30,17:00,#308,"Decoupling Scheduler, Topology Layout, and Algorithm to Easily Enlarge the Tuning Space of GPU Graph Processing ","S. Jeong, Y. Lee, J. Lee, H. Choi, S. Song, J. Lee, Y. Kim, H. Kim"
+
+    -
+        title: Miscellaneous
+        talks: |
+            15:30,16:00,#58,Tiered Hashing: Revamping Hash Indexing under a Unified Memory-Storage Hierarchy ,"J. Zhou, J. Wu, W. Huang, Y. Zhou, F. Wu, L. Shi, X. Zhang, K. Wang, F. Zhu, S. Li, W. Wang"
+            16:00,16:30,#145,Understanding and Reaching the Performance Limit of Schedule Tuning on Stable Synchronization Determinism ,"Q. Zhao, Z. Qiu, S. Shao, X. Hui, H. Khan, G. Jin"
+            16:30,17:00,#183,VoxelCache: Accelerating Online Mapping in Robotics and 3D Reconstruction Tasks ,"S. Durvasula, R. Kiguru, S. Mathur, J. Xu, J. Lin, N. Vijaykumar"
+
+tuesday:
+    morning:
+    -
+        title: Better neural networks
+        talks: |
+
+            10:00,10:30,#178,Effective Performance Modeling and Domain-Specific Compiler Optimization of CNNs for GPUs ,"Y. Xu, Q. Yuan, E. Barton, R. Li, P. Sadayappan, A. Sukumaran-Rajam"
+            10:30,11:00,#136,High-performance Architecture Aware Sparse Convolutional Neural Networks for GPUs ,"L. Xiang, P. Sadayappan, A. Sukumaran-Rajam"
+            11:00,11:30,#256,Weightless Neural Networks for Efficient Edge Inference ,"Z. Susskind, A. Arora, I. Miranda, L. Villon, R. Katopodis, L. de Araújo, D. Dutra, P. Lima, F. França, M. Breternitz Jr., L. John"
+            11:30,12:00,#176,Q-gym: An Equality Saturation Framework for DNN Inference Exploiting Weight Repetition ,"C. Fu, H. Huang, B. Wasti, C. Cummins, R. Baghdadi, K. Hazelwood, Y. Tian, J. Zhao, H. Leather"
+
+    afternoon:
+    -
+        title: Getting more out of your GPU
+        talks: |
+            13:30,14:00,#43,Locality-aware Optimizations for Improving Remote Memory Latency in Multi-GPU Systems ,"L. Belayneh, H. Ye, K. Chen, D. Blaauw, T. Mudge, R. Dreslinski, N. Talati"
+            14:00,14:30,#50,GPUPool: A Holistic Approach to Fine-Grained GPU Sharing in the Cloud ,"X. Tan, P. Golikov, N. Vijaykumar, G. Pekhimenko"
+            14:30,15:00,#135,NaviSim: A Highly Accurate GPU Simulator for AMD RDNA GPUs ,"Y. Bao, Y. Sun, Z. Feric, M. Shen, M. Weston, J. Abellán, T. Baruah, J. Kim, A. Joshi, D. Kaeli"
+
+    - 
+        title: Better hardware
+        talks: |
+            13:30,14:00,#158,mu-grind: A Framework for Dynamically Instrumenting HLS generated RTL ,"P. Vahdatnia, A. sharifian, R. Hojabr, A. Shriraman"
+            14:00,14:30,#276,Athena: An Early-Fetch Architecture To Reduce On-Chip Page Walk Latencies ,"S. Ghahani, S. Khadirsharbiyani, J. Kotra, M. Kandemir"
+            14:30,15:00,#204,DSDP: Dual Stream Data Prefetcher ,"M. He, H. Wang, K. Zhou, K. Cui, H. Yan, C. Guo, R. He"
+
+    evening:
+    -
+        title: Task parallelism
+        talks: |
+            15:30,16:00,#83,Efficient task-mapping of parallel applications using a space-filling curve ,"O. Kwon, J. Kang, S. Lee, W. Kim, J. Song"
+            16:00,16:30,#103,Auto-Partitioning Heterogeneous Task-Parallel Programs with StreamBlocks ,"M. Emami, E. Bezati, J. Janneck, J. Larus"
+
+    -
+        title: Optimization
+        talks: |
+            15:30,16:00,#26,HBMax: Optimizing Memory Efficiency for Parallel Influence Maximization on Multicore Architectures ,"X. Chen, M. Minutoli, J. Tian, M. Halappanavar, A. Kalyanaraman, D. Tao"
+            16:00,16:30,#127,Optimizing Regular Expressions via Rewrite-Guided Synthesis ,"J. McClurg, M. Claver, J. Garner, J. Vossen, J. Schmerge, M. Belviranli"
+
+wednesday:
+    morning:
+    -
+        title: GPU algorithms
+        talks: |
+            11:00,11:30,#78,Parallelizing Neural Network Models Effectively on GPU by Implementing Reductions Atomically ,"J. Zhao, C. Bastoul, Y. Yi, J. Hu, W. Nie, R. Zhang, Z. Geng, C. Li, T. Tachon, Z. Gan"
+            11:30,12:00,#114,GAP: GPU Adaptive In-situ Parallel Analytics ,"H. Xing, G. Agrawal, R. Ramnath"
+            12:00,12:30,#258,A GPU Multiversion B-Tree ,"M. Awad, S. Porumbescu, J. Owens"
+
+    -
+        title: Portable performance
+        talks: |
+            11:00,11:30,#312,Breaking the Vendor Lock --- Performance Portable Programming Through OpenMP as Target Independent Runtime Layer ,"J. Doerfert, M. Jasper, J. Huber, K. Abdelaal, G. Georgakoudis, T. Scogland, K. Parasyris"
+            11:30,12:00,#10,BenchPress: A Deep Active Benchmark Generator ,"F. Tsimpourlas, P. Petoumenos, M. Xu, C. Cummins, K. Hazelwood, A. Rajan, H. Leather"
+            12:00,12:30,#52,Collage: Seamless Integration of Deep Learning Backends with Automatic Placement ,"B. Jeon, S. Park, P. Liao, S. Xu, T. Chen, Z. Jia"

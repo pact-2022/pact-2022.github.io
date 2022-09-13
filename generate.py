@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 
 from pathlib import Path
+from dataclasses import dataclass
+from typing import Sequence
 
 
 # {{{ remove common indentation
@@ -61,6 +63,55 @@ DATA = {
         }
 
 
+# {{{ program
+
+@dataclass(frozen=True)
+class Talk:
+    start: str
+    end: str
+    nr: str
+    title: str
+    authors: str
+
+
+@dataclass(frozen=True)
+class Track:
+    title: str
+    talks: Sequence[Talk]
+
+
+def parse_track(track):
+    import csv
+    from io import StringIO
+
+    return Track(
+            title=track["title"],
+            talks=[
+                Talk(*row)
+                for row in csv.reader(StringIO(track["talks"]))
+                if row
+                ])
+
+
+def load_program():
+    from yaml import load, Loader
+    with open("papersprogram.yaml", "r") as inf:
+        pdata = load(inf, Loader=Loader)
+
+    return {
+        day_name: {
+            session_name: [
+                parse_track(track)
+                for track in tracks
+                ]
+            for session_name, tracks in sessions.items()
+            }
+        for day_name, sessions in pdata.items()
+        }
+
+# }}}
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(
@@ -86,7 +137,8 @@ def main():
     basepath = Path(*fname.parts[1:])
 
     data = DATA | {
-            "current_file": str(basepath)
+            "current_file": str(basepath),
+            "program": load_program(),
             }
 
     from html import unescape

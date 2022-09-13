@@ -1,0 +1,160 @@
+{% extends "base-sidebar.html" %}
+
+{% block maincol %}
+  {% filter markdown %}
+    # Tutorials/Workshops Program
+
+    - [October 8: Tutorials and Workshops Day 1](#ws1)
+    - [October 9: Tutorials and Workshops Day 2](#ws2)
+    - [October 10: Main Conference Day 1](program.html#main1)
+    - [October 11: Main Conference Day 2](program.html#main2)
+    - [October 12: Main Conference Day 3](program.html#main3)
+
+
+    <a id="ws1"></a>
+
+    ## Saturday, October 8, 2022
+
+    ##### Tutorial: Memory-Centric Computing
+
+    - **Onur Mutlu** (ETH Zurich)
+
+    Computing is bottlenecked by data. Large amounts of application data
+    overwhelm storage capability, communication capability, and computation
+    capability of the modern machines we design today. As a result, many key
+    applications' performance, efficiency and scalability are bottlenecked by
+    data movement. In this lecture, we describe three major shortcomings of
+    modern architectures in terms of 1) dealing with data, 2) taking advantage
+    of the vast amounts of data, and 3) exploiting different semantic
+    properties of application data. We argue that an intelligent architecture
+    should be designed to handle data well. We show that handling data well
+    requires designing architectures based on three key principles: 1)
+    data-centric, 2) data-driven, 3) data-aware. We give several examples for
+    how to exploit each of these principles to design a much more efficient and
+    high performance computing system. We especially discuss recent research
+    that aims to fundamentally reduce memory latency and energy, and
+    practically enable computation close to data, with at least two promising novel directions: 1) processing using memory, which exploits analog
+    operational properties of memory chips to perform massively-parallel
+    operations in memory, with low-cost changes, 2) processing near memory,
+    which integrates sophisticated additional processing capability
+    in memory controllers, the logic layer of 3D-stacked memory technologies,
+    or memory chips to enable high memory bandwidth and low memory latency to
+    near-memory logic. We show both types of architectures can enable orders of
+    magnitude improvements in performance and energy consumption of many
+    important workloads, such as graph analytics, database systems, machine
+    learning, video processing. We discuss how to enable adoption of such
+    fundamentally more intelligent architectures, which we believe are key to
+    efficiency, performance, and sustainability. We conclude with some guiding
+    principles for future computing architecture and system designs.
+
+    ##### Tutorial: Boosting Productivity and Applications Performance on Parallel Distributed Systems with the SHAD C++ Library
+
+    - **Vito Giovanni Castellana** (Pacific Northwest National Laboratory, Richland, WA)
+    - **Marco Minutoli** (Pacific Northwest National Laboratory, Richland, WA)
+    - **John Feo** (Pacific Northwest National Laboratory, Richland, WA)
+
+    As the complexity and scale of High Performance Computing systems grows
+    (node, core, and accelerators counts, memory, network), so does the
+    complexity of applications, and thus, the demand for portability and
+    productivity. With these issues in mind, we have designed SHAD, the
+    Scalable High-performance Algorithms and Data-structures library. SHAD is
+    open source software, written in C++, for C++ developers. Unlike other HPC
+    libraries for distributed systems, which rely on SPMD models, SHAD adopts a
+    shared-memory programming abstraction, to make C++ programmers feel at
+    home. Thanks to its abstraction layers, SHAD can target different systems,
+    ranging from laptops to HPC clusters, without any need for modifying the
+    user-level code. In this tutorial, we first overview the design of the SHAD
+    library, depicting its main components: runtime systems abstractions for
+    tasking; parallel and distributed data-structures; STL-compliant interfaces
+    and algorithms.  We then propose an interactive hands-on session, with
+    coding exercises covering the different components of the software, from
+    the tasking API up to the STL algorithms and Data Structures layer.
+    The SHAD library is available at <https://github.com/pnnl/SHAD>.
+
+    ##### Tutorial: NVMExplorer: A Framework for Cross-Stack Comparisons of Embedded Non-Volatile Memory Solutions
+
+    - **Lilian Pentecost** (Amherst College)
+    - **Alexander Hankin** (Harvard / Intel)
+    - **Marco Donato** (Tufts)
+    - **Mark Hempstead** (Tufts)
+    - **Gu-Yeon Wei** (Harvard)
+    - **David Brooks** (Harvard)
+
+    NVMExplorer is a design space exploration framework that addresses key
+    memory system design questions and reveals opportunities and optimizations
+    for embedded NVMs under realistic system-level constraints, while providing
+    a flexible interface and modular evaluation to empower further
+    investigations.  This tutorial will walk through hands-on design studies
+    using our open-source code base, give instruction for how to use our
+    interactive data visualization dashboard, and highlight our most recent
+    additions to the framework, including new data-intensive workload
+    characteristics and 3D-integrated memory solutions.  We will additionally
+    guide attendees to configure and run their own design studies according to
+    their interests.  See our webpage (<http://nvmexplorer.seas.harvard.edu/>)
+    for details.
+
+    <a id="ws2"></a>
+
+    ## Sunday, October 9, 2022
+
+    ##### Workshop: NextPIM --- Evolution of PIM for Next-Generation Computing
+
+    - **Karthik Swaminathan** (IBM Research)
+    - **Saransh Gupta** (IBM Research)
+    - **Vijaykrishnan Narayanan** (Penn State University)
+
+    Over the past decade or so, Processing in Memory (PIM) has evolved from
+    single-cell demonstrations to large scale commercial deployment by leading
+    processor and memory vendors. This workshop recognizes the pervasiveness of PIM
+    across several application domains that form the backbone of computing systems
+    today. It seeks to identify the successes, failures, and future opportunities
+    for these technologies, potential new applications, and the development of
+    tools, runtimes and other essential infrastructure that will dictate ongoing
+    research this field.
+
+    See the [workshop page](https://nextpim.github.io/2022/) for more information.
+
+    ##### Tutorial: SODA Synthesizer: Accelerating Data Science Applications with an end-to-end Silicon Compiler
+
+    - **Nicolas Bohm Agostini**
+    - **Serena Curzel**
+    - **Michele Fiorito**
+    - **Vito Giovanni Castellana**
+    - **Fabrizio Ferrandi**
+    - **Antonino Tumeo**
+
+    Data Science applications (machine learning, graph analytics) are among the
+    main drivers for the renewed interests in designing domain specific
+    accelerators, both for reconfigurable devices (Field Programmable Gate
+    Arrays) and Application-Specific Integrated Circuits (ASICs). Today, the
+    availability of new high-level synthesis (HLS) tools to generate
+    accelerators starting from high-level specifications provides easier access
+    to FPGAs or ASICs and preserves programmer productivity. However, the
+    conventional HLS flow typically starts from languages such as C, C++, or
+    OpenCL, heavily annotated with information to guide the hardware
+    generation, still leaving a significant gap with respect to the (Python
+    based) data science frameworks. 
+
+    This tutorial will discuss HLS to accelerate data science on FPGAs or
+    ASICs, highlighting key methodologies, trends, advantages, benefits, but
+    also gaps that still need to be closed. The tutorial will provide a
+    hands-on experience of the SOftware Defined Accelerators (SODA)
+    Synthesizer, a toolchain composed of SODA-OPT, an opensource front-end and
+    optimizer that interface with productive programming data science
+    frameworks in Python, and Bambu, the most advanced open-source HLS tool
+    available, able to generate optimized accelerators for data-intensive
+    kernels.
+
+    ##### Tutorial: SYCL for heterogenous computing: updates, experience, and feedback
+
+    - **Zheming Jin** (ORNL)
+
+    SYCL programming is based on standard ISO C++ with higher-level
+    abstraction. It is a promising programming model for CPU, GPU, and other
+    accelerators. The tutorial is organized as invited talks from researchers
+    and developers in the SYCL community.  Whether or not you are familiar with
+    SYCL, we hope that the tutorial will be interesting and valuable to your
+    work.
+
+  {% endfilter %}
+{% endblock %}
