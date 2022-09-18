@@ -2,18 +2,56 @@
 
 {% block maincol %}
   {% filter markdown %}
-    # Tutorials/Workshops Program
 
-    - [October 8: Tutorials and Workshops Day 1](#ws1)
-    - [October 9: Tutorials and Workshops Day 2](#ws2)
-    - [October 10: Main Conference Day 1](program.html#main1)
-    - [October 11: Main Conference Day 2](program.html#main2)
-    - [October 12: Main Conference Day 3](program.html#main3)
+    # Tutorials/Workshops Program <a id="top"></a>
 
+    {% from "macros.jinja" import prog_item, prog_nav %}
 
-    <a id="ws1"></a>
+    {{ prog_nav() | indent (4) }}
+
+    {% macro food(start, end, what, where="Classroom B, DPI") %}
+      {{ prog_item(start, end, what, where) | indent(6) }}
+    {% endmacro %}
+    {% macro tutorial(start, end, tid, title, where, what="Tutorial") %}
+      <tr>
+        <td>{{ start }}&ndash;{{ end }}</td>
+        <td>{{ what }}: <b><a href="#tut{{ tid }}">{{ title }}</a></b></td>
+        <td>{{ where }}</td>
+      </tr>
+    {% endmacro %}
+    {% macro resume(start, end) %}
+      <tr>
+        <td>{{ start }}&ndash;{{ end }}</td>
+        <td>Tutorials / Workshops Resume</td>
+        <td>(locations as above)</td>
+      </tr>
+    {% endmacro %}
+
+    <a id="tut0"></a>
 
     ## Saturday, October 8, 2022
+
+    [Back to navigation](#top)
+
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+      {{ food("8:00", "9:00", "Continental Breakfast", "Alma Mater Room, IC") }}
+      {{ tutorial("9:00", "10:30", "0-0", "Memory-Centric Computing pt. 1", "Orange & Blue Room, IC") }}
+      {{ food("10:30", "11:00", "Coffee Break", "Alma Mater Room, IC") }}
+      {{ resume("11:00", "12:30") }}
+      {{ food("12:30", "14:00", "Lunch", "Alma Mater Room, IC") }}
+      {{ tutorial("14:15", "15:45", "0-0", "Memory-Centric Computing pt. 2", "Orange & Blue Room, IC") }}
+      {{ tutorial("14:15", "15:45", "0-1", "SHAD C++ Library", "Discovery Room, DPI") }}
+      {{ tutorial("14:15", "15:45", "0-2", "NVMExplorer", "Classroom A, DPI") }}
+      {{ food("15:45", "16:15", "Coffee Break") }}
+      {{ resume("16:15", "17:45") }}
+    </table>
+
+    <a id="tut0-0"></a>
 
     ##### Tutorial: Memory-Centric Computing
 
@@ -47,6 +85,8 @@
     efficiency, performance, and sustainability. We conclude with some guiding
     principles for future computing architecture and system designs.
 
+    <a id="tut0-1"></a>
+
     ##### Tutorial: Boosting Productivity and Applications Performance on Parallel Distributed Systems with the SHAD C++ Library
 
     - **Vito Giovanni Castellana** (Pacific Northwest National Laboratory, Richland, WA)
@@ -71,6 +111,8 @@
     the tasking API up to the STL algorithms and Data Structures layer.
     The SHAD library is available at <https://github.com/pnnl/SHAD>.
 
+    <a id="tut0-2"></a>
+
     ##### Tutorial: NVMExplorer: A Framework for Cross-Stack Comparisons of Embedded Non-Volatile Memory Solutions
 
     - **Lilian Pentecost** (Amherst College)
@@ -93,9 +135,39 @@
     their interests.  See our webpage (<http://nvmexplorer.seas.harvard.edu/>)
     for details.
 
-    <a id="ws2"></a>
+    <a id="tut1"></a>
 
     ## Sunday, October 9, 2022
+
+    [Back to navigation](#top)
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+      {{ food("8:00", "9:00", "Continental Breakfast") }}
+      {{ tutorial("9:00", "10:30", "1-0", "NextPIM, pt. 1", "Discovery Room, DPI", what="Workshop") }}
+      {{ tutorial("9:00", "10:30", "1-1", "SODA Synthesizer, pt. 1", "Orange &amp; Blue Room, IC") }}
+      {{ food("10:30", "11:00", "Coffee Break") }}
+      {{ resume("11:00", "12:30") }}
+      {{ food("12:30", "14:00", "Lunch") }}
+      {{ tutorial("14:15", "15:45", "1-0", "NextPIM, pt. 2", "Discovery Room, DPI", what="Workshop") }}
+      {{ tutorial("14:15", "15:45", "1-1", "SODA Synthesizer, pt. 2", "Orange &amp; Blue Room, IC") }}
+      {{ tutorial("14:15", "15:45", "1-2", "SYCL", "Classroom A, DPI") }}
+      {{ food("15:45", "16:15", "Coffee Break") }}
+      {{ resume("16:15", "17:45") }}
+    </table>
+
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+    </table>
+
+    <a id="tut1-0"></a>
 
     ##### Workshop: NextPIM --- Evolution of PIM for Next-Generation Computing
 
@@ -113,6 +185,8 @@
     research this field.
 
     See the [workshop page](https://nextpim.github.io/2022/) for more information.
+
+    <a id="tut1-1"></a>
 
     ##### Tutorial: SODA Synthesizer: Accelerating Data Science Applications with an end-to-end Silicon Compiler
 
@@ -133,7 +207,7 @@
     conventional HLS flow typically starts from languages such as C, C++, or
     OpenCL, heavily annotated with information to guide the hardware
     generation, still leaving a significant gap with respect to the (Python
-    based) data science frameworks. 
+    based) data science frameworks.
 
     This tutorial will discuss HLS to accelerate data science on FPGAs or
     ASICs, highlighting key methodologies, trends, advantages, benefits, but
@@ -144,6 +218,8 @@
     frameworks in Python, and Bambu, the most advanced open-source HLS tool
     available, able to generate optimized accelerators for data-intensive
     kernels.
+
+    <a id="tut1-2"></a>
 
     ##### Tutorial: SYCL for heterogenous computing: updates, experience, and feedback
 

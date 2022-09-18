@@ -1,0 +1,23 @@
+{% macro prog_item(start, end, what, where) %}
+<tr>
+  <td>{{ start }}&ndash;{{ end }}</td>
+  <td>{{ what }}</td>
+  <td>{{ where }}</td>
+</tr>
+{% endmacro %}
+
+{% macro prog_nav() %}
+- [October 8: Tutorials and Workshops Day 1](tutorials.html#tut0)
+- [October 9: Tutorials and Workshops Day 2](tutorials.html#tut1)
+- [October 10: Main Conference Day 1](program.html#main0)
+- [October 11: Main Conference Day 2](program.html#main1)
+- [October 12: Main Conference Day 3](program.html#main2)
+
+🚧 *Please be aware that the program shown here is provisional and still
+subject to change.* 🚧
+
+- **DPI** below refers to the **Discovery Partners Institute**, on
+  the fourth floor of 200 S. Wacker Drive, Chicago, IL.
+- **IC** below refers to the **Illini Center**, on the 19th
+  floor of 200 S. Wacker Drive, Chicago, IL.
+{% endmacro %}

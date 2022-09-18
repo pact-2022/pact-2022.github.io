@@ -2,40 +2,81 @@
 
 {% block maincol %}
   {% filter markdown %}
-    # Main Conference Program
 
-    - [October 8: Tutorials and Workshops Day 1](tutorials.html#ws1)
-    - [October 9: Tutorials and Workshops Day 2](tutorials.html#ws2)
-    - [October 10: Main Conference Day 1](#main1)
-    - [October 11: Main Conference Day 2](#main2)
-    - [October 12: Main Conference Day 3](#main3)
+    # Main Conference Program <a id="top"></a>
 
-    {% macro program_day(sessions) %}
-    {% for session_name, tracks in sessions.items() %}
-      <h3>{{ session_name | title }} Session</h3>
-      <div class="row align-items-start">
-        {% for track in tracks %}
-          <div class="col-md">
-            <h5>Track {{loop.index}}: {{track.title}}</h5>
-            <ul>
-              {% for talk in track.talks %}
-                <li>
-                  {{talk.start}}&ndash;{{talk.end}}:
-                  <b>{{talk.title}}</b>
+    {% from "macros.jinja" import prog_item, prog_nav %}
 
-                  <em>{{talk.authors}}</em>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
+    {{ prog_nav() | indent (4) }}
+
+    {% macro food(start, end, what, where="Classroom B, DPI") %}
+      {{ prog_item(start, end, what, where) | indent(6) }}
+    {% endmacro %}
+    {% macro program_track(tracks, index) %}
+      <b>Track {{index + 1}}: {{tracks[index].title}}</b>
+      <ul>
+        {% for talk in tracks[index].talks %}
+          <li>
+            {{talk.start}}&ndash;{{talk.end}}:
+            <b>{{talk.title}}</b>
+
+            <em>{{talk.authors}}</em>
+          </li>
         {% endfor %}
-      </div>
-    {% endfor %}
+      </ul>
+    {% endmacro %}
+    {% macro program_tracks( start, end, tracks,
+        locations=["Discovery Room, DPI", "Orange &amp; Blue Room, IC"]) %}
+      {% for track in tracks %}
+        <tr>
+          <td>{{ start }}&ndash;{{ end }}</td>
+          <td>{{ program_track(tracks, loop.index0) }}</td>
+          <td>{{ locations[loop.index0] }}</td>
+        </tr>
+      {% endfor %}
+    {% endmacro %}
+    {% macro keynote(title, kid, start="8:30", end="9:30", where="Discovery Room, DPI") %}
+      <tr>
+        <td>{{ start }}&ndash;{{ end }}</td>
+        <td>Keynote: <b><a href="#keynote-{{ kid }}">{{ title }}</a></b></td>
+        <td>{{ where }}</td>
+      </tr>
     {% endmacro %}
 
-    <a id="main1"></a>
+    <a id="main0"></a>
 
     ## Monday, October 10, 2022
+
+    [Back to navigation](#top)
+
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+      {{ food("7:30", "8:20", "Continental Breakfast") }}
+      <tr>
+        <td>8:20&ndash;8:30</td>
+        <td>Welcome from the Chairs</td>
+        <td>Discovery Room, DPI</td>
+      </tr>
+      {{ keynote("Closing the Gap between Quantum Algorithms and Machines with Hardware-Software Co-Design", 0) }}
+      {{ food("9:30", "10:00", "Coffee Break") }}
+      {{ program_tracks("10:00", "12:00", program["monday"]["morning"]) }}
+      {{ food("12:00", "13:30", "Lunch") }}
+      <tr>
+        <td>12:30&ndash;13:30</td>
+        <td>Steering Committee Meeting</td>
+        <td></td>
+      </tr>
+      {{ program_tracks("13:30", "15:00", program["monday"]["afternoon"]) }}
+      {{ food("15:00", "15:30", "Coffee Break") }}
+      {{ program_tracks("13:30", "15:00", program["monday"]["evening"]) }}
+      {{ food("17:00", "19:00", "<b>Poster Session</b> / Reception") }}
+    </table>
+
+    <a id="keynote-0"></a>
 
     ### Keynote: Closing the Gap between Quantum Algorithms and Machines with Hardware-Software Co-Design
 
@@ -75,11 +116,35 @@
     > at UCSB from 2005-2015. He is a recipient of the NSF CAREER award,
     > the Intel Outstanding Researcher Award, and 13 best paper awards.
 
-    {{ program_day(program["monday"]) }}
-
-    <a id="main2"></a>
+    <a id="main1"></a>
 
     ## Tuesday, October 11, 2022
+
+    [Back to navigation](#top)
+
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+      {{ food("7:30", "8:30", "Continental Breakfast") }}
+      {{ keynote("MemComputing: Fundamentals and Applications", 1) }}
+      <tr>
+        <td>10:00&ndash;12:00</td>
+        <td><b>ACM SRC Poster Session</b></td>
+        <td>Classroom B, DPI</td>
+      </tr>
+      {{ food("9:30", "10:00", "Coffee Break") }}
+      {{ program_tracks("10:00", "12:00", program["tuesday"]["morning"], ["Orange &amp; Blue Room, IC"]) }}
+      {{ food("12:00", "13:30", "Lunch") }}
+      {{ program_tracks("13:30", "15:00", program["tuesday"]["afternoon"]) }}
+      {{ food("15:00", "15:30", "Coffee Break") }}
+      {{ program_tracks("13:30", "15:00", program["tuesday"]["evening"]) }}
+      {{ food("17:30", "20:30", "Banquet / Excursion", "TBA") }}
+    </table>
+
+    <a id="keynote-1"></a>
 
     #### Keynote: MemComputing: Fundamentals and Applications
 
@@ -123,11 +188,35 @@
     > Nanotechnology Council Distinguished Lecturer. He is the co-founder
     > of [MemComputing, Inc](http://memcpu.com/).
 
-    {{ program_day(program["tuesday"]) }}
-
-    <a id="main3"></a>
+    <a id="main2"></a>
 
     ## Wednesday, October 12, 2022
+
+    [Back to navigation](#top)
+
+    <table class="table table-striped">
+      <thead>
+        <td>Time</td>
+        <td>What</td>
+        <td>Where</td>
+      </thead>
+      {{ food("7:30", "8:30", "Continental Breakfast") }}
+      {{ keynote("AI Acceleration:  Co-optimizing Algorithms, Hardware, and Software", 2) }}
+      <tr>
+        <td>9:30&ndash;10:30</td>
+        <td>Talks: <b>ACM SRC Winners</b></td>
+        <td>Discovery Room, DPI</td>
+      </tr>
+      {{ food("10:30", "11:00", "Coffee Break") }}
+      {{ program_tracks("11:00", "12:30", program["wednesday"]["morning"]) }}
+      <tr>
+        <td>12:30&ndash;12:45</td>
+        <td>Conference Closing</td>
+        <td>Discovery Room, DPI</td>
+      </tr>
+    </table>
+
+    <a id="keynote-2"></a>
 
     #### Keynote: AI Acceleration:  Co-optimizing Algorithms, Hardware, and Software
 
@@ -167,8 +256,6 @@
     > applications and more recently end-to-end accelerator solutions for
     > AI. Many of her research contributions have been incorporated into
     > IBM's Power and System-z Enterprise-class servers.
-
-    {{ program_day(program["wednesday"]) }}
 
   {% endfilter %}
 {% endblock %}
