@@ -149,6 +149,7 @@
       {{ food("8:00", "9:00", "Continental Breakfast") }}
       {{ tutorial("9:00", "10:30", "1-0", "NextPIM, pt. 1", "Discovery Room, DPI", what="Workshop") }}
       {{ tutorial("9:00", "10:30", "1-1", "SODA Synthesizer, pt. 1", "Orange &amp; Blue Room, IC") }}
+      {{ tutorial("9:00", "10:30", "1-3", "COMET", "Classroom A, DPI") }}
       {{ food("10:30", "11:00", "Coffee Break") }}
       {{ resume("11:00", "12:30") }}
       {{ food("12:30", "14:00", "Lunch", "<a href='attend.html#restaurants'>(Attendees on their own)</a>") }}
@@ -231,6 +232,34 @@
     and developers in the SYCL community.  Whether or not you are familiar with
     SYCL, we hope that the tutorial will be interesting and valuable to your
     work.
+
+    <a id="tut1-3"></a>
+
+    ##### Tutorial: COMET: A Domain-Specific Compilation of High-Performance Computational Chemistry
+
+    - **Gokcen Kestor** (Pacific Northwest National Laboratory, Richland, WA)
+
+    The recent slowdown of growth in realized multi-core performance of commodity microprocessors has
+    pushed vendors and users to consider more specialized architectures, including GPUs, FPGAs, and
+    system-on-chip. Several domains, such as artificial intelligence, have experienced an explosion of
+    highly specialized heterogeneous architectures. With such a large variety of architectures,
+    performance portability and productivity have become as important as peak performance, if not more.
+
+    This tutorial introduces COMET (COMpiler for Extreme Targets), a compiler framework that aims at
+    providing performance portability and productivity on heterogenous platforms based on the principle of
+    “write once, run everywhere.” The COMET compiler consists of a Domain Specific Language (DSL) for
+    sparse and dense tensor algebra computations and, a progressive lowering process to map high-level
+    operations to low-level architectural resources. COMET is built using Multi-Level IR (MLIR) Compiler
+    Framework. Drawing motivation from MLIR, the COMET compiler performs different optimizations and code
+    transformations at each level of the IR stack. This tutorial will provide an overview of the COMET
+    compiler and its supported frontends. It will also review the optimizations and transformations
+    supported by the COMET compiler for efficient code generation on target architectures. Hands-on
+    sections will guide attendees how to write their applications based on sparse and dense tensor algebra
+    operations and how to use various compiler optimizations for high performance. At the end of this
+    tutorial, attendees should learn the goals and principles of the compiler framework and how to write
+    various dense and sparse programs using the COMET DSL, NumPy, or Rust, perform sophisticated
+    optimizations including high-level domain specific optimizations, and generate code for various
+    architectures, including CPU and FPGA from a single-source file.
 
   {% endfilter %}
 {% endblock %}
