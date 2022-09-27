@@ -9,7 +9,7 @@
 
     {{ prog_nav() | indent (4) }}
 
-    {% macro food(start, end, what, where="Classroom B, DPI") %}
+    {% macro food(start, end, what, where="Discovery Room, DPI") %}
       {{ prog_item(start, end, what, where) | indent(6) }}
     {% endmacro %}
     {% macro tutorial(start, end, tid, title, where, what="Tutorial") %}
