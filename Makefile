@@ -15,6 +15,7 @@ img: \
 	static/images-generated/illinois-wordmark.png \
 	static/images-generated/ieee-tcpp-logo-300px.png \
 	static/images-generated/huawei.png \
+	static/images-generated/qualcomm.png \
 	static/images-generated/headshot-diventra.jpg \
 	static/images-generated/headshot-srinivasan.jpg \
 	static/images-generated/headshot-chong.jpg
@@ -24,6 +25,10 @@ static/images-generated/chicago-skyline-800px.jpeg: image-src/pedro-lastra-Nyvq2
 	gm convert -geometry 800x800 $< $@
 
 static/images-generated/huawei.png: image-src/huawei-logo.png
+	mkdir -p "./$(dir $@)"
+	gm convert -geometry 300x300 $< $@
+
+static/images-generated/qualcomm.png: image-src/qualcomm-logo.png
 	mkdir -p "./$(dir $@)"
 	gm convert -geometry 300x300 $< $@
 
