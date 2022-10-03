@@ -4,9 +4,8 @@ monday:
         title: "Compilers"
         talks: |
             10:00,10:30,#295,ReACT: Redundancy-Aware Code Generation for Tensor Expressions ,"T. Zhou, R. Tian, R. Ashraf, R. Gioiosa, G. Kestor, V. Sarkar"
-            10:30,11:00,#120,Combining Run-time Checks and Compile-time Analysis to Improve Control Flow Auto-Vectorization ,"B. Liu, A. Laird, W. Tsang, B. Mahjour, M. Dehnavi"
-            11:00,11:30,#12,Com-CAS: Effective Cache Apportioning Under Compiler Guidance ,"B. Chatterjee, S. Khan, S. Pande"
-            11:30,12:00,#267,Transfer-Tuning: Reusing Auto-Schedules for Efficient Tensor Program Code Generation ,"P. Gibson, J. Cano"
+            10:30,11:00,#12,Com-CAS: Effective Cache Apportioning Under Compiler Guidance ,"B. Chatterjee, S. Khan, S. Pande"
+            11:00,11:30,#267,Transfer-Tuning: Reusing Auto-Schedules for Efficient Tensor Program Code Generation ,"P. Gibson, J. Cano"
 
     -
         title: Optimizing the execution of GNNs
@@ -84,6 +83,7 @@ tuesday:
         talks: |
             15:30,16:00,#26,HBMax: Optimizing Memory Efficiency for Parallel Influence Maximization on Multicore Architectures ,"X. Chen, M. Minutoli, J. Tian, M. Halappanavar, A. Kalyanaraman, D. Tao"
             16:00,16:30,#127,Optimizing Regular Expressions via Rewrite-Guided Synthesis ,"J. McClurg, M. Claver, J. Garner, J. Vossen, J. Schmerge, M. Belviranli"
+            16:30,17:00,#120,Combining Run-time Checks and Compile-time Analysis to Improve Control Flow Auto-Vectorization ,"B. Liu, A. Laird, W. Tsang, B. Mahjour, M. Dehnavi"
 
 wednesday:
     morning:
