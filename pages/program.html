@@ -9,7 +9,7 @@
 
     {{ prog_nav() | indent (4) }}
 
-    {% macro food(start, end, what, where="Classroom B, DPI") %}
+    {% macro food(start, end, what, where="Discovery Room, DPI") %}
       {{ prog_item(start, end, what, where) | indent(6) }}
     {% endmacro %}
     {% macro program_track(tracks, index) %}
@@ -73,7 +73,7 @@
       {{ program_tracks("13:30", "15:00", program["monday"]["afternoon"]) }}
       {{ food("15:00", "15:30", "Coffee Break") }}
       {{ program_tracks("15:30", "17:00", program["monday"]["evening"]) }}
-      {{ food("17:00", "19:00", "<b>Poster Session</b> / Reception") }}
+      {{ food("17:00", "19:00", "<b>Poster Session</b> / Reception", where="Classroom B, DPI") }}
     </table>
 
     <a id="keynote-0"></a>
