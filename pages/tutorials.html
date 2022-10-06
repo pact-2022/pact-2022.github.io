@@ -1,58 +1,22 @@
 {% extends "base-sidebar.html" %}
 
 {% block maincol %}
+
+  <h1>Tutorials/Workshops Program <a id="top"></a></h1>
+
+  {% from "macros.jinja" import prog_nav, program_tut1, program_tut2 %}
+
+  {{ prog_nav() | indent (4) }}
+
+  <a id="tut0"></a>
+
+  <h2>Saturday, October 8, 2022</h2>
+
+  <a href="#top">Back to navigation</a>
+
+  {{ program_tut1() }}
+
   {% filter markdown %}
-
-    # Tutorials/Workshops Program <a id="top"></a>
-
-    {% from "macros.jinja" import prog_item, prog_nav %}
-
-    {{ prog_nav() | indent (4) }}
-
-    {% macro food(start, end, what, where="Discovery Room, DPI") %}
-      {{ prog_item(start, end, what, where) | indent(6) }}
-    {% endmacro %}
-    {% macro tutorial(start, end, tid, title, where, what="Tutorial") %}
-      <tr>
-        <td>{{ start }}&ndash;{{ end }}</td>
-        <td>{{ what }}: <b><a href="#tut{{ tid }}">{{ title }}</a></b></td>
-        <td>{{ where }}</td>
-      </tr>
-    {% endmacro %}
-    {% macro resume(start, end) %}
-      <tr>
-        <td>{{ start }}&ndash;{{ end }}</td>
-        <td>Tutorials / Workshops resume</td>
-        <td>(locations as above)</td>
-      </tr>
-    {% endmacro %}
-
-    <a id="tut0"></a>
-
-    ## Saturday, October 8, 2022
-
-    [Back to navigation](#top)
-
-    <table class="table table-striped">
-      <thead>
-        <td>Time</td>
-        <td>What</td>
-        <td>Where</td>
-      </thead>
-      {{ food("8:00", "9:00", "Continental Breakfast", "Alma Mater Room, IC") }}
-      {{ tutorial("9:00", "10:30", "0-0", "Memory-Centric Computing pt. 1", "Orange & Blue Room, IC") }}
-      {{ food("10:30", "11:00", "Coffee Break", "Alma Mater Room, IC") }}
-      {{ resume("11:00", "12:30") }}
-      {{ food("12:30", "14:00", "Lunch", "<a href='attend.html#restaurants'>(Attendees on their own)</a>") }}
-      {{ tutorial("14:15", "15:45", "0-0", "Memory-Centric Computing pt. 2", "Orange & Blue Room, IC") }}
-      {{ tutorial("14:15", "15:45", "0-1", "SHAD C++ Library", "Discovery Room, DPI") }}
-      {{ tutorial("14:15", "15:45", "0-2", "NVMExplorer", "Classroom A, DPI") }}
-      {{ food("15:45", "16:15", "Coffee Break") }}
-      {{ resume("16:15", "17:45") }}
-    </table>
-
-    <a id="tut0-0"></a>
-
     ##### Tutorial: Memory-Centric Computing
 
     - **Onur Mutlu** (ETH Zurich)
@@ -134,31 +98,19 @@
     guide attendees to configure and run their own design studies according to
     their interests.  See our webpage (<http://nvmexplorer.seas.harvard.edu/>)
     for details.
+  {% endfilter %}
 
-    <a id="tut1"></a>
+  <a id="tut1"></a>
 
-    ## Sunday, October 9, 2022
+  <h2>Sunday, October 9, 2022</h2>
 
-    [Back to navigation](#top)
-    <table class="table table-striped">
-      <thead>
-        <td>Time</td>
-        <td>What</td>
-        <td>Where</td>
-      </thead>
-      {{ food("8:00", "9:00", "Continental Breakfast") }}
-      {{ tutorial("9:00", "10:30", "1-3", "COMET", "Discovery Room, DPI") }}
-      {{ tutorial("9:00", "10:30", "1-1", "SODA Synthesizer, pt. 1", "Orange &amp; Blue Room, IC") }}
-      {{ food("10:30", "11:00", "Coffee Break") }}
-      {{ resume("11:00", "12:30") }}
-      {{ food("12:30", "14:00", "Lunch", "<a href='attend.html#restaurants'>(Attendees on their own)</a>") }}
-      {{ tutorial("14:15", "15:45", "1-2", "SYCL", "Discovery Room, DPI") }}
-      {{ tutorial("14:15", "15:45", "1-1", "SODA Synthesizer, pt. 2", "Orange &amp; Blue Room, IC") }}
-      {{ food("15:45", "16:15", "Coffee Break") }}
-      {{ resume("16:15", "17:45") }}
-    </table>
+  <a href="#top">Back to navigation</a>
 
-    <a id="tut1-1"></a>
+  {{ program_tut2() }}
+
+  <a id="tut1-1"></a>
+
+  {% filter markdown %}
 
     ##### Tutorial: SODA Synthesizer: Accelerating Data Science Applications with an end-to-end Silicon Compiler
 

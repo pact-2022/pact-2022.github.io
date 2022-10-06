@@ -1,83 +1,23 @@
 {% extends "base-sidebar.html" %}
 
 {% block maincol %}
-  {% filter markdown %}
+    <h1> Main Conference Program <a id="top"></a></h1>
 
-    # Main Conference Program <a id="top"></a>
-
-    {% from "macros.jinja" import prog_item, prog_nav %}
+    {% from "macros.jinja" import prog_nav, program_day1, program_day2, program_day3 %}
 
     {{ prog_nav() | indent (4) }}
 
-    {% macro food(start, end, what, where="Discovery Room, DPI") %}
-      {{ prog_item(start, end, what, where) | indent(6) }}
-    {% endmacro %}
-    {% macro program_track(tracks, index) %}
-      <b>Track {{index + 1}}: {{tracks[index].title}}</b>
-      <ul>
-        {% for talk in tracks[index].talks %}
-          <li>
-            {{talk.start}}&ndash;{{talk.end}}:
-            <b>{{talk.title}}</b>
-
-            <em>{{talk.authors}}</em>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endmacro %}
-    {% macro program_tracks( start, end, tracks,
-        locations=["Discovery Room, DPI", "Orange &amp; Blue Room, IC"]) %}
-      {% for track in tracks %}
-        <tr>
-          <td>{{ start }}&ndash;{{ end }}</td>
-          <td>{{ program_track(tracks, loop.index0) }}</td>
-          <td>{{ locations[loop.index0] }}</td>
-        </tr>
-      {% endfor %}
-    {% endmacro %}
-    {% macro keynote(title, kid, start="8:30", end="9:30", where="Discovery Room, DPI") %}
-      <tr>
-        <td>{{ start }}&ndash;{{ end }}</td>
-        <td>Keynote: <b><a href="#keynote-{{ kid }}">{{ title }}</a></b></td>
-        <td>{{ where }}</td>
-      </tr>
-    {% endmacro %}
-
     <a id="main0"></a>
 
-    ## Monday, October 10, 2022
+    <h2>Monday, October 10, 2022</h2>
 
-    [Back to navigation](#top)
+    <a href="#top">Back to navigation</a>
 
-    <table class="table table-striped">
-      <thead>
-        <td>Time</td>
-        <td>What</td>
-        <td>Where</td>
-      </thead>
-      {{ food("7:30", "8:20", "Continental Breakfast") }}
-      <tr>
-        <td>8:20&ndash;8:30</td>
-        <td>Welcome from the Chairs</td>
-        <td>Discovery Room, DPI</td>
-      </tr>
-      {{ keynote("Closing the Gap between Quantum Algorithms and Machines with Hardware-Software Co-Design", 0) }}
-      {{ food("9:30", "10:00", "Coffee Break") }}
-      {{ program_tracks("10:00", "12:00", program["monday"]["morning"]) }}
-      {{ food("12:00", "13:30", "Lunch", "<a href='attend.html#restaurants'>(Attendees on their own)</a>") }}
-      <tr>
-        <td>12:30&ndash;13:30</td>
-        <td>Steering Committee Meeting</td>
-        <td>Illini Room, IC</td>
-      </tr>
-      {{ program_tracks("13:30", "15:00", program["monday"]["afternoon"]) }}
-      {{ food("15:00", "15:30", "Coffee Break") }}
-      {{ program_tracks("15:30", "17:00", program["monday"]["evening"]) }}
-      {{ food("17:00", "19:00", "<b>Poster Session</b> / Reception", where="Classroom B, DPI") }}
-    </table>
+    {{ program_day1(program) }}
 
     <a id="keynote-0"></a>
 
+    {% filter markdown %}
     ### Keynote: Closing the Gap between Quantum Algorithms and Machines with Hardware-Software Co-Design
 
     **Fred Chong** (Department of Computer Science, University of Chicago, Chicago, IL)
@@ -115,50 +55,19 @@
     > and Director of the Greenscale Center for Energy-Efficient Computing
     > at UCSB from 2005-2015. He is a recipient of the NSF CAREER award,
     > the Intel Outstanding Researcher Award, and 13 best paper awards.
+    {% endfilter %}
 
     <a id="main1"></a>
 
-    ## Tuesday, October 11, 2022
+    <h2>Tuesday, October 11, 2022</h2>
 
-    [Back to navigation](#top)
+    <a href="#top">Back to navigation</a>
 
-    <table class="table table-striped">
-      <thead>
-        <td>Time</td>
-        <td>What</td>
-        <td>Where</td>
-      </thead>
-      {{ food("7:30", "8:25", "Continental Breakfast") }}
-      <tr>
-        <td>8:25&ndash;8:30</td>
-        <td>PACT 2023 in Vienna: A Preview</td>
-        <td>Discovery Room, DPI</td>
-      </tr>
-      {{ keynote("MemComputing: Fundamentals and Applications", 1) }}
-      {{ food("9:30", "10:00", "Coffee Break") }}
-      <tr>
-        <td>10:00&ndash;12:00</td>
-        <td><b>ACM SRC Poster Session</b></td>
-        <td>Classroom B, DPI</td>
-      </tr>
-      {{ program_tracks("10:00", "12:00", program["tuesday"]["morning"], ["Orange &amp; Blue Room, IC"]) }}
-      {{ food("12:00", "13:30", "Lunch", "<a href='attend.html#restaurants'>(Attendees on their own)</a>") }}
-      {{ program_tracks("13:30", "15:00", program["tuesday"]["afternoon"]) }}
-      {{ food("15:00", "15:30", "Coffee Break") }}
-      {{ program_tracks("15:30", "16:30", program["tuesday"]["evening"]) }}
-      <tr>
-        <td>16:30&ndash;17:00</td>
-        <td><p>Travel to boat dock</p>
-          The dock is a <b>30-minute walk from DPI</b>. Please make sure to allow sufficient time.
-        </td>
-        <td>(Attendees on their own)</td>
-      </tr>
-      {{ food("17:00", "20:30", "Banquet / Excursion: Architecture Boat Tour (boarding starts 17:15, vessel departs 17:30 sharp)",
-      "<a href='https://www.google.com/maps/place/Wendella+tours+Docks+3+and+4/@41.8891462,-87.6278298,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d071c55a07d:0x4832841889121c35!8m2!3d41.8891462!4d-87.6256411'>Wendella West Dock 4</a>") }}
-    </table>
+    {{ program_day2(program) }}
 
     <a id="keynote-1"></a>
 
+    {% filter markdown %}
     #### Keynote: MemComputing: Fundamentals and Applications
 
     **Massimiliano Di Ventra** (Department of Physics, University of California San Diego, La Jolla, CA)
@@ -200,37 +109,19 @@
     > 2020 Feynman Prize for theory in Nanotechnology, and is a 2022 IEEE
     > Nanotechnology Council Distinguished Lecturer. He is the co-founder
     > of [MemComputing, Inc](http://memcpu.com/).
+    {% endfilter %}
 
     <a id="main2"></a>
 
-    ## Wednesday, October 12, 2022
+    <h2>Wednesday, October 12, 2022</h2>
 
-    [Back to navigation](#top)
+    <a href="#top">Back to navigation</a>
 
-    <table class="table table-striped">
-      <thead>
-        <td>Time</td>
-        <td>What</td>
-        <td>Where</td>
-      </thead>
-      {{ food("7:30", "8:30", "Continental Breakfast") }}
-      {{ keynote("AI Acceleration:  Co-optimizing Algorithms, Hardware, and Software", 2) }}
-      <tr>
-        <td>9:30&ndash;10:30</td>
-        <td>Talks: <b>ACM SRC Winners</b></td>
-        <td>Discovery Room, DPI</td>
-      </tr>
-      {{ food("10:30", "11:00", "Coffee Break") }}
-      {{ program_tracks("11:00", "12:30", program["wednesday"]["morning"]) }}
-      <tr>
-        <td>12:30&ndash;12:45</td>
-        <td>Conference Closing</td>
-        <td>Discovery Room, DPI</td>
-      </tr>
-    </table>
+    {{ program_day3(program) }}
 
     <a id="keynote-2"></a>
 
+    {% filter markdown %}
     #### Keynote: AI Acceleration:  Co-optimizing Algorithms, Hardware, and Software
 
     **Vijayalakshmi Srinivasan** (IBM Research, Yorktown Heights, NY)
@@ -269,6 +160,6 @@
     > applications and more recently end-to-end accelerator solutions for
     > AI. Many of her research contributions have been incorporated into
     > IBM's Power and System-z Enterprise-class servers.
+    {% endfilter %}
 
-  {% endfilter %}
 {% endblock %}
