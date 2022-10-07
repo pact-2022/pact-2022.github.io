@@ -77,6 +77,7 @@ class Talk:
 @dataclass(frozen=True)
 class Track:
     title: str
+    chair: str
     talks: Sequence[Talk]
 
 
@@ -86,6 +87,7 @@ def parse_track(track):
 
     return Track(
             title=track["title"],
+            chair=track.get("chair"),
             talks=[
                 Talk(*row)
                 for row in csv.reader(StringIO(track["talks"]))

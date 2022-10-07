@@ -29,7 +29,10 @@
 {% endmacro %}
 
 {% macro program_track(tracks, index) %}
-  <b>Track {{index + 1}}: {{tracks[index].title}}</b>
+  <p><b>Track {{index + 1}}: {{tracks[index].title}}</b></p>
+  {% if tracks[index].chair %}
+    <p><i>Session Chair: {{tracks[index].chair}}</i></p>
+  {% endif %}
   <ul>
     {% for talk in tracks[index].talks %}
       <li>
