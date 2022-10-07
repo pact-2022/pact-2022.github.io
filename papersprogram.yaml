@@ -9,7 +9,7 @@ monday:
             11:30,12:00,#26,HBMax: Optimizing Memory Efficiency for Parallel Influence Maximization on Multicore Architectures ,"X. Chen, M. Minutoli, J. Tian, M. Halappanavar, A. Kalyanaraman, D. Tao"
 
     -
-        title: Optimizing the execution of GNNs (Chair: Antonino Tumeo)
+        title: "Optimizing the execution of GNNs (Chair: Antonino Tumeo)"
         talks: |
             10:00,10:30,#520,Slice-and-Forge: Making Better Use of Caches for Graph Convolutional Network Accelerators ,"M. Yoo, J. Song, H. Lee, J. Lee, N. Kim, Y. Kim, J. Lee"
             10:30,11:00,#148,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing ,"Z. Zhou, C. Li, X. Wei, X. Wang, G. Sun"
@@ -49,7 +49,7 @@ monday:
 tuesday:
     morning:
     -
-        title: Better neural networks (Chair: Jose Cano Reyes)
+        title: "Better neural networks (Chair: Jose Cano Reyes)"
         talks: |
 
             10:00,10:30,#178,Effective Performance Modeling and Domain-Specific Compiler Optimization of CNNs for GPUs ,"Y. Xu, Q. Yuan, E. Barton, R. Li, P. Sadayappan, A. Sukumaran-Rajam"
@@ -66,7 +66,7 @@ tuesday:
             14:30,15:00,#135,NaviSim: A Highly Accurate GPU Simulator for AMD RDNA GPUs ,"Y. Bao, Y. Sun, Z. Feric, M. Shen, M. Weston, J. Abellán, T. Baruah, J. Kim, A. Joshi, D. Kaeli"
 
     - 
-        title: Better hardware (Chair: Sushant Kondguli)
+        title: "Better hardware (Chair: Sushant Kondguli)"
         talks: |
             13:30,14:00,#158,mu-grind: A Framework for Dynamically Instrumenting HLS generated RTL ,"P. Vahdatnia, A. sharifian, R. Hojabr, A. Shriraman"
             14:00,14:30,#276,Athena: An Early-Fetch Architecture To Reduce On-Chip Page Walk Latencies ,"S. Ghahani, S. Khadirsharbiyani, J. Kotra, M. Kandemir"
