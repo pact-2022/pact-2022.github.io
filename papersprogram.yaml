@@ -1,7 +1,7 @@
 monday:
     morning:
     -
-        title: Compilers for ever (Chair: Nelson Amaral)
+        title: "Compilers for ever (Chair: Nelson Amaral)"
         talks: |
             10:00,10:30,#295,ReACT: Redundancy-Aware Code Generation for Tensor Expressions ,"T. Zhou, R. Tian, R. Ashraf, R. Gioiosa, G. Kestor, V. Sarkar"
             10:30,11:00,#12,Com-CAS: Effective Cache Apportioning Under Compiler Guidance ,"B. Chatterjee, S. Khan, S. Pande"
