@@ -26,7 +26,13 @@
 {% endmacro %}
 
 {% macro reg_open(start, where="DPI") %}
-  {{ prog_item(start, None, "Registration opens", where) | indent(6) }}
+        {{ prog_item(start, None, "<p>Registration opens</p>
+
+        <p>
+        Please allow sufficient time to clear building security.
+        See <a href='attend.html#arrival'>here</a> for instructions.
+        </p>
+        ", where) | indent(6) }}
 {% endmacro %}
 
 {% macro program_track(tracks, index) %}
