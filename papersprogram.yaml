@@ -28,6 +28,7 @@ monday:
 
     -
         title: Sparse matrix computations
+        chair: Gagan Agrawal
         talks: |
             13:30,14:00,#416,Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs ,"R. Castro, D. Andrade, B. Fraguela"
             14:00,14:30,#133,Squaring the circle: Executing Sparse Matrix Computations on FlexTPU—a TPU-like processor ,"X. He, K. Chen, S. Feng, H. Kim, D. Blaauw, R. Dreslinski, T. Mudge"
