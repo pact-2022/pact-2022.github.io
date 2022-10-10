@@ -21,6 +21,7 @@ monday:
     afternoon:
     -
         title: Getting more out of your memory
+        chair: Jose Moreira
         talks: |
             13:30,14:00,#66,FlatPack: Flexible Compaction of Compressed Memory ,"A. Eldstål-Ahrens, A. Arelakis, I. Sourdis"
             14:00,14:30,#118,Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications ,"H. Qiu, S. Liu, X. Song, S. Khan, G. Pekhimenko"
@@ -45,6 +46,7 @@ monday:
 
     -
         title: Miscellaneous
+        chair: Jose Moreira
         talks: |
             15:30,16:00,#58,Tiered Hashing: Revamping Hash Indexing under a Unified Memory-Storage Hierarchy ,"J. Zhou, J. Wu, W. Huang, Y. Zhou, F. Wu, L. Shi, X. Zhang, K. Wang, F. Zhu, S. Li, W. Wang"
             16:00,16:30,#145,Understanding and Reaching the Performance Limit of Schedule Tuning on Stable Synchronization Determinism ,"Q. Zhao, Z. Qiu, S. Shao, X. Hui, H. Khan, G. Jin"
@@ -81,6 +83,7 @@ tuesday:
     evening:
     -
         title: Task parallelism
+        chair: Santosh Pande
         talks: |
             15:30,16:00,#83,Efficient task-mapping of parallel applications using a space-filling curve ,"O. Kwon, J. Kang, S. Lee, W. Kim, J. Song"
             16:00,16:30,#103,Auto-Partitioning Heterogeneous Task-Parallel Programs with StreamBlocks ,"M. Emami, E. Bezati, J. Janneck, J. Larus"
