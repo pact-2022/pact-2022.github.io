@@ -37,6 +37,7 @@ monday:
     evening:
     -
         title: Graph processing
+        chair: Vivek Sarkar
         talks: |
             15:30,16:00,#72,Batched Graph Community Detection on GPUs ,"H. Chou, S. Ghosh"
             16:00,16:30,#85,SampleMine: A Framework for Applying Random Sampling to Subgraph Pattern Mining through Loop Perforation ,"P. Jiang, Y. Wei, J. Su, R. Wang, B. Wu"
