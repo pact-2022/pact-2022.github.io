@@ -67,6 +67,7 @@ tuesday:
     afternoon:
     -
         title: Getting more out of your GPU
+        chair: Jose Moreira
         talks: |
             13:30,14:00,#43,Locality-aware Optimizations for Improving Remote Memory Latency in Multi-GPU Systems ,"L. Belayneh, H. Ye, K. Chen, D. Blaauw, T. Mudge, R. Dreslinski, N. Talati"
             14:00,14:30,#50,GPUPool: A Holistic Approach to Fine-Grained GPU Sharing in the Cloud ,"X. Tan, P. Golikov, N. Vijaykumar, G. Pekhimenko"
@@ -90,6 +91,7 @@ tuesday:
 
     -
         title: Optimization
+        chair: Jose Moreira
         talks: |
             15:30,16:00,#127,Optimizing Regular Expressions via Rewrite-Guided Synthesis ,"J. McClurg, M. Claver, J. Garner, J. Vossen, J. Schmerge, M. Belviranli"
             16:00,16:30,#120,Combining Run-time Checks and Compile-time Analysis to Improve Control Flow Auto-Vectorization ,"B. Liu, A. Laird, W. Tsang, B. Mahjour, M. Dehnavi"
@@ -98,6 +100,7 @@ wednesday:
     morning:
     -
         title: GPU algorithms
+        chair: Jose Moreira
         talks: |
             11:00,11:30,#78,Parallelizing Neural Network Models Effectively on GPU by Implementing Reductions Atomically ,"J. Zhao, C. Bastoul, Y. Yi, J. Hu, W. Nie, R. Zhang, Z. Geng, C. Li, T. Tachon, Z. Gan"
             11:30,12:00,#114,GAP: GPU Adaptive In-situ Parallel Analytics ,"H. Xing, G. Agrawal, R. Ramnath"
